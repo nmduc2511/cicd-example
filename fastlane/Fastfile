@@ -16,8 +16,29 @@
 default_platform(:ios)
 
 platform :ios do
-  desc "Description of what the lane does"
-  lane :custom_lane do
-    # add actions here: https://docs.fastlane.tools/actions
+  desc "Build Test Flight"
+  # Deletes files archives as result
+  before_all do
+      sh(command: "rm -vfr ~/Library/Developer/Xcode/Archives/*")
+      clear_derived_data()
+      xcode_select("/Applications/Xcode.app")
+  end
+
+  # release build
+  lane :release do
+    match(type: "appstore", 
+          app_identifier: "mobile.duc..cicd-example",
+          readonly: is_ci)
+    increment_build_number(xcodeproj: "cicd-example.xcodeproj")
+    build_app(
+      scheme: "Mobile CiCd",
+      export_method: "app-store"
+    )
+    upload_to_testflight
+  end
+
+  # Deletes files created as result of running gym, cert, sigh or download_dsyms
+  after_all do |lane|
+      clean_build_artifacts
   end
 end

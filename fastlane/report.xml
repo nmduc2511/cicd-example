@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="fastlane.lanes">
+    
+    
+    
+      
+      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.000394">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="1: rm -vfr ~/Library/Developer/Xcode/Archives/*" time="0.012272">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="2: clear_derived_data" time="0.015523">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="3: xcode_select" time="0.000269">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="4: is_ci" time="0.000177">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="5: match" time="9.427693">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="6: increment_build_number" time="0.891822">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="7: build_app" time="34.23375">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="8: upload_to_testflight" time="165.653313">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="9: clean_build_artifacts" time="0.000972">
+        
+      </testcase>
+    
+  </testsuite>
+</testsuites>
