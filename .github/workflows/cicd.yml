@@ -6,9 +6,6 @@ on:
 jobs:
   builds:
     runs-on: self-hosted
-    env:
-      PATH: /usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
-      LC_ALL: en_US.UTF-8
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
