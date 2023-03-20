@@ -141,3 +141,5 @@ touch .env
 FASTLANE_USER= // apple userid
 FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD=***-***-***-***
 ```
+## Config Runner To Run self-hosted
+* [Adding self-hosted runners](https://docs.github.com/en/actions/hosting-your-own-runners/adding-self-hosted-runners)
