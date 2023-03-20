@@ -1,0 +1,13 @@
+name: CI
+on:
+  push:
+    branches:
+      - master
+      
+jobs:
+  build:
+    name: Build and test
+    runs-on: self-hosted
+    steps:
+      - name: Build and test
+        run: fastlane release --readonly
