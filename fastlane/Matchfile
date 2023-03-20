@@ -7,7 +7,7 @@ type("appstore") # The default type, can be: appstore, adhoc, enterprise or deve
 app_identifier("mobile.duc..cicd-example")
 username("nmduc251194@gmail.com") # Your Apple Developer Portal username
 
-
+ENV['MATCH_PASSWORD'] = 'qwe123'
 
 
 
