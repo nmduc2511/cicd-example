@@ -1,13 +1,13 @@
-name: CI
+name: GitHub Actions
 on:
   push:
-    branches:
-      - master
-      
+    branches: [master]
+
 jobs:
-  build:
-    name: Build and test
+  builds:
     runs-on: self-hosted
     steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
       - name: Build and test
-        run: fastlane release --readonly
+        run: fastlane ios release build --env
