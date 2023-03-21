@@ -1,16 +1,20 @@
-name: GitHub Actions
+name: Master
 on:
   push:
-    branches: [master]
-
+    branches:
+      - master
 jobs:
-  builds:
+  build:
+    name: Release
     runs-on: self-hosted
     env:
       PATH: /usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
       LC_ALL: en_US.UTF-8
     steps:
-      - name: Check out repository code
+      - name: Checkout 
         uses: actions/checkout@v3
-      - name: Build and test
-        run: fastlane ios release build --env
+        with:
+          lfs: 'true'
+      - name: Release
+        run: |
+          fastlane ios release build --env
